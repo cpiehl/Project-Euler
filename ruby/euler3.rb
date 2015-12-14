@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# What is the largest prime factor of the number 600851475143 ?
 
 number = 600851475143
 divisor = 2
