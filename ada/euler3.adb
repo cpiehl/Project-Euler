@@ -1,5 +1,5 @@
--- Sums all numbers divisible by 3 or 5 under 1000
--- compile with gnatmake euler1.adb
+-- What is the largest prime factor of the number 600851475143 ?
+-- compile with gnatmake euler3.adb
 with Ada.Text_IO; use Ada.Text_IO;
 procedure Euler3 is
 	number : Long_Integer := 600851475143;
