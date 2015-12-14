@@ -2,8 +2,8 @@
 <head>
 <script type="text/javascript">
 	result = -1;
-	for (x = 0; x < 999; x++) {
-		for (y = 0; y < 999; y++) {
+	for (x = 100; x < 1000; x++) {
+		for (y = 100; y < 1000; y++) {
 			num = (x * y).toString();
 			if (num == num.split("").reverse().join("") && num > result) {
 				result = x * y;
