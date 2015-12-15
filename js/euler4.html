@@ -4,9 +4,10 @@
 	result = -1;
 	for (x = 100; x < 1000; x++) {
 		for (y = 100; y < 1000; y++) {
-			num = (x * y).toString();
-			if (num == num.split("").reverse().join("") && num > result) {
-				result = x * y;
+			num = x * y;
+			numstr.toString();
+			if (numstr == numstr.split("").reverse().join("") && num > result) {
+				result = num;
 				break;
 			}
 		}
