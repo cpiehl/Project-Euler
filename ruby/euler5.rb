@@ -6,4 +6,4 @@
 #   of the numbers from 1 to 20?
 # Answer: 232792560
 
-puts((1..20).reduce(:lcm))
+puts((11..20).reduce(:lcm))
