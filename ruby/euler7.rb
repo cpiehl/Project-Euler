@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# Project Euler #6
+# Project Euler #7
 # What is the 10 001st prime number?
 # Answer: 104743
 
