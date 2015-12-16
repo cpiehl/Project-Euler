@@ -1,0 +1,52 @@
+*> Project Euler #7
+*> What is the 10001st prime number?
+*> compile with cobc -free -O -x -o euler7.exe euler7.cob
+*> -free - use free source format. without cobol requires certain format
+*> -x - build executable
+*> -O - optimize
+*> -o - output file
+
+IDENTIFICATION DIVISION.
+PROGRAM-ID. EULER7.
+
+DATA DIVISION.
+	WORKING-STORAGE SECTION.
+	01 WS-I PIC 9(6) VALUE 3.
+	01 WS-N PIC 9(6) VALUE 1.
+	01 WS-S PIC 9(6) VALUE 1.
+	01 WS-X PIC 9(6) VALUE 0.
+	01 WS-R PIC 9(6) VALUE 0.
+	01 WS-P PIC 9(6) VALUE 0.
+	01 WS-T PIC 9(6) VALUE 0.
+	01 WS-MOD PIC 9(6) VALUE 0.
+	01 WS-NULL PIC 9(6) VALUE 0.
+
+PROCEDURE DIVISION.
+	A-PARA.
+	PERFORM B-PARA UNTIL WS-I=10002.
+	DISPLAY WS-X.
+	STOP RUN.
+
+	B-PARA.
+	IF WS-S = 1 THEN
+		COMPUTE WS-X = 6 * WS-N - 1
+		MOVE 0 TO WS-S
+	ELSE
+		COMPUTE WS-X = 6 * WS-N + 1
+		MOVE 1 TO WS-S
+		ADD 1 TO WS-N
+	END-IF.
+	COMPUTE WS-R = FUNCTION SQRT (WS-X).
+	MOVE 1 TO WS-P.
+	MOVE 3 TO WS-T.
+	PERFORM C-PARA UNTIL WS-T > WS-R.
+	IF WS-P = 1 THEN
+		ADD 1 TO WS-I
+	END-IF.
+
+	C-PARA.
+	DIVIDE WS-T INTO WS-X GIVING WS-NULL REMAINDER WS-MOD.
+	IF WS-MOD = 0 THEN
+		MOVE 0 TO WS-P
+	END-IF.
+	ADD 2 TO WS-T.
