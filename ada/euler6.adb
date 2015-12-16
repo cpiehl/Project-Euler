@@ -2,7 +2,7 @@
 -- Find the difference between the sum of the squares of the first one
 --   hundred natural numbers and the square of the sum.
 -- Answer: 25164150
--- Compile with gnatmake euler5.adb
+-- Compile with gnatmake euler6.adb
 with Ada.Text_IO; use Ada.Text_IO;
 procedure Euler6 is
 	squareofsums : integer := 0;
