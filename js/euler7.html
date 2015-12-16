@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+	/* Project Euler #6
+	 * Find the difference between the sum of the squares of the first one
+	 *   hundred natural numbers and the square of the sum.
+	 * Answer: 25164150
+	*/
+	i = 3;
+	n = 1;
+	s = 1;
+	while (i <= 10001)
+	{
+		if (s == 1)
+		{
+			x = 6 * n - 1;
+			s = 0;
+		} else {
+			x = 6 * n + 1;
+			s = 1;
+			n = n + 1;
+		}
+		r = Math.pow(x, 0.5);
+		p = 1;
+		t = 3;
+		while (t <= r)
+		{
+			if (x % t == 0)
+				p = 0;
+			t += 2;
+		}
+		if (p == 1)
+			i++;
+	}
+	document.write(x);
+</script>
+</head>
+<body>
+</body>
+</html>
