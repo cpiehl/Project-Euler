@@ -51,7 +51,6 @@ bignum = \
 bigprod = 1
 
 for i,n in enumerate(bignum[:-12]):
-	print(i, n)
 	prod = 1
 	for x in range(13):
 		prod *= int(bignum[i+x])
