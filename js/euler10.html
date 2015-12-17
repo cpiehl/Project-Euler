@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+	/* Project Euler #10
+	 * Find the sum of all the primes below two million.
+	 * Answer:  142913828922
+	*/
+	MAX = 2000000;
+	marked = Array(MAX).fill(false);
+	value = 3;
+	s = 2;
+	while (value < MAX)
+	{
+		if (!marked[value])
+		{
+			s += value;
+			i = value;
+			while (i < MAX)
+			{
+				marked[i] = true;
+				i += value;
+			}
+		}
+		value += 2;
+	}
+	document.write(s);
+</script>
+</head>
+<body>
+</body>
+</html>
