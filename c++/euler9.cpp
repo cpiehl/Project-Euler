@@ -1,4 +1,4 @@
-/* Project Euler #8
+/* Project Euler #9
  * A Pythagorean triplet is a set of three natural numbers,
  *   a < b < c, for which,
  *   a^2 + b^2 = c^2
@@ -18,7 +18,9 @@ int main()
 		{
 			int c = 1000 - (a + b);
 			if (a*a + b*b == c*c)
+			{
 				std::cout << (a * b * c) << std::endl;
+			}
 		}
 	}
 	return 0;
