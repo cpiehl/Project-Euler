@@ -1,8 +1,3 @@
 #!/usr/bin/env python3
 
-sum = 0
-for x in range(1000):
-	if x % 3 == 0 or x % 5 == 0:
-		sum += x
-
-print(sum)
+print(sum([n for n in range(1000) if n % 3 == 0 or n % 5 == 0]))
