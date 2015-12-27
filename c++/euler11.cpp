@@ -1,6 +1,7 @@
 /* Project Euler #11
- * Find the sum of all the primes below two million.
- * Answer:  142913828922
+ * What is the greatest product of four adjacent numbers in the same
+ *   direction (up, down, left, right, or diagonally) in the 20x20 grid?
+ * Answer:  70600674
 */
 
 #include <iostream>
