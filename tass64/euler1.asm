@@ -1,3 +1,9 @@
+; Project Euler #1
+; Find the sum of all the multiples of 3 or 5 below 1000.
+; compile with: tass64 euler1.asm -ao euler1.prg
+; run with: vice euler1.prg
+;   Answer: 233168
+
 	*=$0801
 	.byte $0c, $08, $0a, $00, $9e, $20
 	.byte $34, $30, $39, $36, $00, $00
