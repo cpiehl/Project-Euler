@@ -5,7 +5,7 @@ int main()
 	int sum = 0;
 	int n = 1;
 	int lastn = 0;
-	while (n < 4000000)
+	while (n + lastn < 100)
 	{
 		int newn = n + lastn;
 		if (newn % 2 == 0)
