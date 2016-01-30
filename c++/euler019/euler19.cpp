@@ -2,7 +2,7 @@
  * How many Sundays fell on the first of the month during the
  *   twentieth century (Jan 1, 1901 to Dec 31, 2000)?
  * Jan 1, 1900 was a Monday
- * Answer:    1074
+ * Answer:    171
 */
 
 #include <iostream>
