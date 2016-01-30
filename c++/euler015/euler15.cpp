@@ -24,7 +24,7 @@ int main()
 	}
 
 	for (int y = 1; y < MAX; y++)
-		for (int x = 1; x < MAX; x++)
+		for (int x = 1; x < MAX - y; x++)
 			matrix[x][y] = matrix[x-1][y] + matrix[x][y-1];
 
 	cout << matrix[SIZE][SIZE] << endl;
