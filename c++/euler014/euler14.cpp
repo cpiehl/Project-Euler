@@ -8,7 +8,6 @@
 */
 
 #include <iostream>
-#include <stdexcept>      // std::out_of_range
 #include <map>
 using namespace std;
 
