@@ -15,7 +15,7 @@
 #include <vector>
 using namespace std;
 
-int number_of_prime_factors(int n, vector<int>* primes)
+int number_of_prime_factors(int n, const vector<int>* primes)
 {
 	int count = 0;
 	for (auto p = (*primes).begin(); p != (*primes).end(); ++p)
