@@ -8,14 +8,18 @@ using namespace std;
 
 int main()
 {
-	long long int number = 600851475143;
-	int divisor = 2;
-	while (number > 1) {
-		if (0 == (number % divisor)) {
+	long long int number = 600851475143LL;
+	while (0 == (number % 2) && number > 1)
+	{
+		number /= 2;
+	}
+	int divisor = 3;
+	while (number > 1)
+	{
+		if (0 == (number % divisor))
 			number /= divisor;
-			divisor--;
-		}
-		divisor++;
+		else
+			divisor += 2;
 	}
 	cout << divisor << endl;
 	return 0;
