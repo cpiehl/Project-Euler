@@ -3,7 +3,6 @@ What is the largest prime factor of the number 600851475143 ?
 Answer: 6857
 *}
 program Euler003;
-uses crt;
 
 var
 number,divisor : int64;

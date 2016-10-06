@@ -3,7 +3,6 @@ Find the sum of the even-valued Fibonacci terms under 4 million
 Answer: 4613732
 *}
 program Euler002;
-uses crt;
 
 var
 sum,n,newn,lastn : int32;
