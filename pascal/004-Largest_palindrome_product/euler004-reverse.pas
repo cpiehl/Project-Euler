@@ -21,7 +21,7 @@ begin
 	found := false;
 	num := 0;
 	a := 9;
-	while ((0 <= a) and not found) do begin
+	while ((0 < a) and not found) do begin { a can't be 0, else 5-digit }
 		b := 9;
 		while ((0 <= b) and not found) do begin
 			c := 9;
