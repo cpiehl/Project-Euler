@@ -39,11 +39,10 @@ def main():
 
 			#~ chain.add(''.join(sorted(str(j))))
 			chain.add(j)
-		else:
-			cyclical |= chain  # 2x faster than cyclical = cyclical | chain
-			if j in unhappy:
-				unhappy |= chain
-				count += 1
+		cyclical |= chain  # 2x faster than cyclical = cyclical | chain
+		if j in unhappy:
+			unhappy |= chain
+			count += 1
 
 	print(count)
 
