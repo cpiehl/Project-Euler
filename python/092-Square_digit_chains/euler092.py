@@ -15,32 +15,36 @@ from Euler import sum_squared_digits, timing
 # How many starting numbers below ten million will arrive at 89?
 
 # Answer: 8581146
-# Still takes ~30s to solve, needs a better algorithm
+# Still takes ~24s to solve, needs a better algorithm
 
 @timing
 def main():
-	cyclical = {1, 4, 10, 13, 16, 20, 32, 37, 42, 44, 58, 89, 145}
-	#~ cyclical = {'1', '4', '01', '13', '16', '02', '23', '37', '24', '44', '58', '89', '145'}
-	happy = {44, 32, 13, 10, 1}
-	unhappy = {4, 16, 37, 58, 89, 145, 42, 20}
+	#~ cyclical = {1, 4, 10, 13, 16, 20, 32, 37, 42, 44, 58, 89, 145}
+	cyclical = {'1', '4', '01', '13', '16', '02', '23', '37', '24', '44', '58', '89', '145'}
+	#~ happy = {44, 32, 13, 10, 1}
+	#~ unhappy = {4, 16, 37, 58, 89, 145, 42, 20}
+	unhappy = {'4', '16', '37', '58', '89', '145', '24', '02'}
 
+	L = 7 # limit expressed as 10**L
 	count = 0
-	for i in range(1,10**7):
+	for i in range(1,10**L):
 		j = i
 		chain = set() # All numbers in the chain, for if we come across them later
-		#~ print(''.join(sorted(str(j))))
-		#~ while ''.join(sorted(str(j))) not in cyclical:
-		while j not in cyclical:
+		while True:
+			jstr = ''.join(sorted(str(j)))
+			if jstr in cyclical:
+				break
+		#~ while j not in cyclical:
 			#~ print([int(c)**2 for c in str(j)], j)
 			#~ j = sum([int(c)**2 for c in str(j)]) # sum squares of digits
 			#~ j = sum([int(c)*int(c) for c in str(j)]) # mult is faster than pow
 			#~ j = sum((int(c)*int(c) for c in str(j))) # generator is faster
 			j = sum_squared_digits(j) # pure ints is even faster
 
-			#~ chain.add(''.join(sorted(str(j))))
-			chain.add(j)
+			chain.add(jstr)
+			#~ chain.add(j)
 		cyclical |= chain  # 2x faster than cyclical = cyclical | chain
-		if j in unhappy:
+		if jstr in unhappy:
 			unhappy |= chain
 			count += 1
 
