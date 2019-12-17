@@ -9,7 +9,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem004
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL p, x, y, result := -1 AS INT
 
 		FOR x := 100 UPTO 999

@@ -9,7 +9,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem010
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL sievedPrimes := PrimeSieve(2000000) AS List<LOGIC>
         LOCAL primes := List<INT64>{} AS List<INT64>
         LOCAL i AS INT

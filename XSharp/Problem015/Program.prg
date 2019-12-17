@@ -18,7 +18,7 @@ BEGIN NAMESPACE Problem015
     GLOBAL CONST SIZE := 20 AS INT
     GLOBAL CONST MAX := (2 * SIZE) + 1 AS INT
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL matrix := List<List<INT64>>{} AS List<List<INT64>>
         LOCAL i, j AS INT
         

@@ -33,7 +33,7 @@ BEGIN NAMESPACE Problem011
 		{01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48} ;
 	} AS INT[][]
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL x, y, p, max := -1 AS INT
 
 		FOR y := 1 UPTO 20

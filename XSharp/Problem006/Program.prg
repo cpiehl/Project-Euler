@@ -9,7 +9,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem006
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL sumofsquare := 0, squareofsum := 0 AS INT
 		LOCAL i AS INT
 

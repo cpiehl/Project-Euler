@@ -9,13 +9,14 @@ USING System.Text
 
 BEGIN NAMESPACE Problem001
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL i AS INT, total AS INT
         FOR i := 1 UPTO 999
             IF i % 3 == 0 .OR. i % 5 == 0
                 total := total + i
             ENDIF
         NEXT
+        
         Console.WriteLine("Sum: " + total:ToString())
         Console.WriteLine("Press any key to continue...")
         Console.ReadKey()

@@ -9,7 +9,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem003
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
 		
         LOCAL number := 600851475143 AS INT64
 		LOCAL divisor := 2 AS INT

@@ -12,7 +12,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem012
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         
 		LOCAL i := 1, trinum := 0, limit := 500 AS INT
 

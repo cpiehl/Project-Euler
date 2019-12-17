@@ -10,7 +10,7 @@ USING System.Numerics
 
 BEGIN NAMESPACE Problem013
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
 		LOCAL a := BigInteger{0}, b AS BigInteger
 		LOCAL i AS INT
 

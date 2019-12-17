@@ -9,7 +9,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem007
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
 		LOCAL primes := GetNPrimes(10000) AS IEnumerable<INT>
         
         Console.WriteLine("Answer: " + primes:Last():ToString())

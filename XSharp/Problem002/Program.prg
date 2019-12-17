@@ -10,7 +10,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem002
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL fib := Fibonacci(4000000) AS IEnumerable<INT>
         Console.WriteLine("Sum: " + fib:Where({| f | f % 2 == 0}):Sum():ToString())
         Console.WriteLine("Press any key to continue...")

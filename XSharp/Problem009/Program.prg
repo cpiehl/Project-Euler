@@ -9,7 +9,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem009
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         Console.WriteLine("Answer: " + PythagoreanTripletProduct(1000):ToString())
         Console.WriteLine("Press any key to continue...")
         Console.ReadKey()

@@ -13,7 +13,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem014
 
-	FUNCTION Start() AS VOID STRICT
+    FUNCTION Start() AS VOID STRICT
         LOCAL collatzLengths := Dictionary<DWORD, DWORD>{} AS Dictionary<DWORD, DWORD>
         LOCAL n, length, maxlen = 0, n_maxlen = 0 AS DWORD
         
