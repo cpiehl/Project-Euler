@@ -9,24 +9,24 @@ USING System.Text
 
 BEGIN NAMESPACE Problem007
 
-    FUNCTION Start() AS VOID STRICT
+	FUNCTION Start() AS VOID STRICT
 		LOCAL primes := GetNPrimes(10000) AS IEnumerable<INT>
-        
-        Console.WriteLine("Answer: " + primes:Last():ToString())
-        Console.WriteLine("Press any key to continue...")
-        Console.ReadKey()
-        
-    FUNCTION GetNPrimes(n AS INT) AS IEnumerable<INT>
+		
+		Console.WriteLine("Answer: " + primes:Last():ToString())
+		Console.WriteLine("Press any key to continue...")
+		Console.ReadKey()
+		
+	FUNCTION GetNPrimes(n AS INT) AS IEnumerable<INT>
 		LOCAL count := 1, p := 1 AS INT
 		WHILE count <= n
 			p += 2
 			IF IsPrime(p)
-                count++
+				count++
 				YIELD RETURN p
 			ENDIF
-        ENDDO
-        
-    FUNCTION IsPrime(n AS INT) AS LOGIC
+		ENDDO
+		
+	FUNCTION IsPrime(n AS INT) AS LOGIC
 		LOCAL i, z := (INT)(Math.Sqrt(n) + 0.5) AS INT
 		IF n % 2 == 0
 			RETURN FALSE
@@ -37,5 +37,5 @@ BEGIN NAMESPACE Problem007
 			ENDIF
 		NEXT
 		RETURN TRUE
-	
+		
 END NAMESPACE

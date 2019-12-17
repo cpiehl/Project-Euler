@@ -12,31 +12,31 @@ USING System.Text
 
 BEGIN NAMESPACE Problem012
 
-    FUNCTION Start() AS VOID STRICT
-        
+	FUNCTION Start() AS VOID STRICT
+	
 		LOCAL i := 1, trinum := 0, limit := 500 AS INT
-
+		
 		WHILE TRUE
 			trinum += i
 			IF NumberOfDivisors(trinum) > limit
 				EXIT
 			ENDIF
 			i++
-        ENDDO
-        
-        Console.WriteLine("Answer: " + trinum:ToString())
-        Console.WriteLine("Press any key to continue...")
-        Console.ReadKey()
-        
-    FUNCTION NumberOfDivisors(n AS INT) AS INT
+		ENDDO
+		
+		Console.WriteLine("Answer: " + trinum:ToString())
+		Console.WriteLine("Press any key to continue...")
+		Console.ReadKey()
+		
+	FUNCTION NumberOfDivisors(n AS INT) AS INT
 		LOCAL count := 2, z := (INT)Math.Sqrt(n), i AS INT
-
+		
 		FOR i := 2 UPTO z
 			IF n % i == 0
 				count += 2
 			ENDIF
 		NEXT
-
+		
 		RETURN count
-	
+		
 END NAMESPACE

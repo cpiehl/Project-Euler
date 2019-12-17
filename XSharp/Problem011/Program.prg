@@ -10,7 +10,7 @@ USING System.Text
 
 BEGIN NAMESPACE Problem011
 
-    GLOBAL grid := <INT[]>{ ;
+	GLOBAL grid := <INT[]>{ ;
 		{08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08}, ;
 		{49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00}, ;
 		{81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65}, ;
@@ -32,10 +32,10 @@ BEGIN NAMESPACE Problem011
 		{20, 73, 35, 29, 78, 31, 90, 01, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 05, 54}, ;
 		{01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48} ;
 	} AS INT[][]
-
-    FUNCTION Start() AS VOID STRICT
-        LOCAL x, y, p, max := -1 AS INT
-
+	
+	FUNCTION Start() AS VOID STRICT
+		LOCAL x, y, p, max := -1 AS INT
+		
 		FOR y := 1 UPTO 20
 			FOR x := 1 UPTO 20
 				IF y <= 17
@@ -63,10 +63,10 @@ BEGIN NAMESPACE Problem011
 					ENDIF
 				ENDIF
 			NEXT
-        NEXT
-        
-        Console.WriteLine("Answer: " + max:ToString())
-        Console.WriteLine("Press any key to continue...")
-        Console.ReadKey()
-	
+		NEXT
+		
+		Console.WriteLine("Answer: " + max:ToString())
+		Console.WriteLine("Press any key to continue...")
+		Console.ReadKey()
+		
 END NAMESPACE

@@ -10,20 +10,20 @@ USING System.Numerics
 
 BEGIN NAMESPACE Problem013
 
-    FUNCTION Start() AS VOID STRICT
+	FUNCTION Start() AS VOID STRICT
 		LOCAL a := BigInteger{0}, b AS BigInteger
 		LOCAL i AS INT
-
+		
 		FOR i := 1 UPTO biglist:Length
 			b := BigInteger.Parse(biglist[i])
 			a += b
 		NEXT
-        
-        Console.WriteLine("Answer: " + a:ToString():Substring(0, 10))
-        Console.WriteLine("Press any key to continue...")
-        Console.ReadKey()
-        
-    GLOBAL biglist := <STRING>{ ;
+		
+		Console.WriteLine("Answer: " + a:ToString():Substring(0, 10))
+		Console.WriteLine("Press any key to continue...")
+		Console.ReadKey()
+		
+	GLOBAL biglist := <STRING>{ ;
 		"37107287533902102798797998220837590246510135740250", ;
 		"46376937677490009712648124896970078050417018260538", ;
 		"74324986199524741059474233309513058123726617309629", ;

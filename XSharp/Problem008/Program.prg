@@ -10,8 +10,8 @@ USING System.Text
 
 BEGIN NAMESPACE Problem008
 
-    GLOBAL adjacentCount := 13 AS INT
-    GLOBAL number := ;
+	GLOBAL adjacentCount := 13 AS INT
+	GLOBAL number := ;
 		"73167176531330624919225119674426574742355349194934" + ;
 		"96983520312774506326239578318016984801869478851843" + ;
 		"85861560789112949495459501737958331952853208805511" + ;
@@ -32,12 +32,12 @@ BEGIN NAMESPACE Problem008
 		"84580156166097919133875499200524063689912560717606" + ;
 		"05886116467109405077541002256983155200055935729725" + ;
 		"71636269561882670428252483600823257530420752963450" AS STRING
-
-    FUNCTION Start() AS VOID STRICT
+	
+	FUNCTION Start() AS VOID STRICT
 		LOCAL i AS INT
 		LOCAL p, max := -1 AS INT64
-        LOCAL z := number:Length AS INT
-        
+		LOCAL z := number:Length AS INT
+		
 		FOR i := 0 UPTO z - adjacentCount
 			p := 1
 			FOREACH c AS CHAR IN number:SubString(i, adjacentCount)
@@ -46,10 +46,10 @@ BEGIN NAMESPACE Problem008
 			IF p > max
 				max := p
 			ENDIF
-        NEXT
-        
-        Console.WriteLine("Answer: " + max:ToString())
-        Console.WriteLine("Press any key to continue...")
-        Console.ReadKey()
-	
+		NEXT
+		
+		Console.WriteLine("Answer: " + max:ToString())
+		Console.WriteLine("Press any key to continue...")
+		Console.ReadKey()
+		
 END NAMESPACE

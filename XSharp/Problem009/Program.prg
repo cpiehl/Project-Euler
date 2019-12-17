@@ -9,14 +9,14 @@ USING System.Text
 
 BEGIN NAMESPACE Problem009
 
-    FUNCTION Start() AS VOID STRICT
-        Console.WriteLine("Answer: " + PythagoreanTripletProduct(1000):ToString())
-        Console.WriteLine("Press any key to continue...")
-        Console.ReadKey()
-        
-    FUNCTION PythagoreanTripletProduct(n AS INT) AS INT
+	FUNCTION Start() AS VOID STRICT
+		Console.WriteLine("Answer: " + PythagoreanTripletProduct(1000):ToString())
+		Console.WriteLine("Press any key to continue...")
+		Console.ReadKey()
+		
+	FUNCTION PythagoreanTripletProduct(n AS INT) AS INT
 		LOCAL a, b, c AS INT
-
+		
 		FOR a := 1 UPTO (n - 2)
 			FOR b := 1 UPTO (n - 1) - a
 				c := n - (a + b)
@@ -26,5 +26,5 @@ BEGIN NAMESPACE Problem009
 			NEXT
 		NEXT
 		RETURN -1
-	
+		
 END NAMESPACE
